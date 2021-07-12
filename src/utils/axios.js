@@ -13,7 +13,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/json'
 NProgress.inc(0.2)
 NProgress.configure({ easing: 'ease', speed: 600, showSpinner: false })
 
-axios.inCharClass.request.use(function (config) {
+axios.interceptors.request.use(function (config) {
     // 启动进度条
     NProgress.start()
     return config
